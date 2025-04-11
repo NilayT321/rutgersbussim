@@ -1,0 +1,64 @@
+[gd_scene load_steps=13 format=3 uid="uid://d0aiwoxn1dvdq"]
+
+[ext_resource type="Texture2D" uid="uid://bw85py568gk71" path="res://texs/road_road.jpg" id="1_tx18f"]
+[ext_resource type="Texture2D" uid="uid://dh0bkc6fqadyk" path="res://texs/sidewalk.jpg" id="2_71r6i"]
+[ext_resource type="Texture2D" uid="uid://bqd8v78kq8fsn" path="res://texs/grass_texture.png" id="3_4d8gt"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_71r6i"]
+albedo_texture = ExtResource("1_tx18f")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_4d8gt"]
+material = SubResource("StandardMaterial3D_71r6i")
+size = Vector2(3, 3)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_tx18f"]
+data = PackedVector3Array(0.5, 0, 0.5, -0.5, 0, 0.5, 0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0, -0.5, 0.5, 0, -0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4d8gt"]
+albedo_texture = ExtResource("2_71r6i")
+uv1_scale = Vector3(0.9, 0.9, 0.9)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_kt64y"]
+material = SubResource("StandardMaterial3D_4d8gt")
+size = Vector2(3, 3)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_y0eie"]
+data = PackedVector3Array(0.5, 0, 0.5, -0.5, 0, 0.5, 0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0, -0.5, 0.5, 0, -0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kt64y"]
+albedo_texture = ExtResource("3_4d8gt")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_y0eie"]
+material = SubResource("StandardMaterial3D_kt64y")
+size = Vector2(3, 3)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_rjyms"]
+data = PackedVector3Array(0.5, 0, 0.5, -0.5, 0, 0.5, 0.5, 0, -0.5, -0.5, 0, 0.5, -0.5, 0, -0.5, 0.5, 0, -0.5)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Road" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_4d8gt")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Road"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Road/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_tx18f")
+
+[node name="Sidewalk" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00423741, 0.42486, 0.00231481)
+mesh = SubResource("PlaneMesh_kt64y")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Sidewalk"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sidewalk/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_y0eie")
+
+[node name="Grass" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86031, 0)
+mesh = SubResource("PlaneMesh_y0eie")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Grass"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grass/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_rjyms")

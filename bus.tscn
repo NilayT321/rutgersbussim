@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c374c6blrwn5h"]
+
+[ext_resource type="PackedScene" uid="uid://cq11dpv03covu" path="res://texs/bus.gltf" id="1_xlfce"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xlfce"]
+size = Vector3(3.43672, 0.922867, 0.755429)
+
+[node name="Bus" instance=ExtResource("1_xlfce")]
+gravity_scale = 0.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0279298, -2.52128e-05, -0.000146359)
+shape = SubResource("BoxShape3D_xlfce")
