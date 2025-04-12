@@ -3,7 +3,7 @@
 [ext_resource type="MeshLibrary" uid="uid://bvyw8ab55j134" path="res://tiles.tres" id="1_burrm"]
 [ext_resource type="PackedScene" uid="uid://ba6nnxckmvsqt" path="res://player.tscn" id="2_k2krh"]
 [ext_resource type="Script" uid="uid://c1t4whe1katxp" path="res://player.gd" id="3_sbyex"]
-[ext_resource type="PackedScene" uid="uid://c374c6blrwn5h" path="res://bus.tscn" id="4_k2krh"]
+[ext_resource type="PackedScene" uid="uid://comv5m63e11am" path="res://bus.tscn" id="4_k2krh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fj7yv"]
 albedo_color = Color(0.8, 0, 0.2, 1)
@@ -129,4 +129,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -111.296, 6.89834, -28.1501)
 shape = SubResource("ConcavePolygonShape3D_burrm")
 
 [node name="Bus" parent="." instance=ExtResource("4_k2krh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7351, 5.63925, -14.7179)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -37.8225, 3.83774, -8.76293)

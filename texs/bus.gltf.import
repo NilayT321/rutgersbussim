@@ -14,7 +14,7 @@ dest_files=["res://.godot/imported/bus.gltf-7af171254b9ae99306b7b9484e161685.scn
 [params]
 
 nodes/root_type="VehicleBody3D"
-nodes/root_name="Bus2"
+nodes/root_name="Bus"
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
 nodes/import_as_skeleton_bones=false
