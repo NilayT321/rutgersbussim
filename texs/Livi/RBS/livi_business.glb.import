@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bvunk64ddvryi"
-path="res://.godot/imported/bus.gltf-7af171254b9ae99306b7b9484e161685.scn"
+uid="uid://ge1lfxb850co"
+path="res://.godot/imported/livi_business.glb-3a6e05dbecce8c6772b289e8b8c2a7ce.scn"
 
 [deps]
 
-source_file="res://texs/bus.gltf"
-dest_files=["res://.godot/imported/bus.gltf-7af171254b9ae99306b7b9484e161685.scn"]
+source_file="res://texs/Livi/RBS/livi_business.glb"
+dest_files=["res://.godot/imported/livi_business.glb-3a6e05dbecce8c6772b289e8b8c2a7ce.scn"]
 
 [params]
 

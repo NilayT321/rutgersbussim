@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dh0bkc6fqadyk"
-path.s3tc="res://.godot/imported/sidewalk.jpg-5e81922d9c7cfe174b5e375cf1fb4e2e.s3tc.ctex"
+uid="uid://p46eb1pg4xny"
+path.s3tc="res://.godot/imported/livi_apt_B_livi_apt_text_5.png-8f6d736ceb1b68cdacd8c8fb4c6c12f5.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "04c32c012ea2e1275ea980734a866467"
+}
 
 [deps]
 
-source_file="res://texs/sidewalk.jpg"
-dest_files=["res://.godot/imported/sidewalk.jpg-5e81922d9c7cfe174b5e375cf1fb4e2e.s3tc.ctex"]
+source_file="res://texs/Livi/LiviB/livi_apt_B_livi_apt_text_5.png"
+dest_files=["res://.godot/imported/livi_apt_B_livi_apt_text_5.png-8f6d736ceb1b68cdacd8c8fb4c6c12f5.s3tc.ctex"]
 
 [params]
 

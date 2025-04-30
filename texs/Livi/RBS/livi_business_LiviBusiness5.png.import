@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqd8v78kq8fsn"
-path.s3tc="res://.godot/imported/grass_texture.png-e8935bc47315bd02b96cb6144b954f24.s3tc.ctex"
+uid="uid://bqwffengwt8v6"
+path.s3tc="res://.godot/imported/livi_business_LiviBusiness5.png-09a0543d66776be748e7c048cd56fdb4.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "5e56dcb4c94b0065a9017ca2d5ec0cd0"
+}
 
 [deps]
 
-source_file="res://texs/grass_texture.png"
-dest_files=["res://.godot/imported/grass_texture.png-e8935bc47315bd02b96cb6144b954f24.s3tc.ctex"]
+source_file="res://texs/Livi/RBS/livi_business_LiviBusiness5.png"
+dest_files=["res://.godot/imported/livi_business_LiviBusiness5.png-09a0543d66776be748e7c048cd56fdb4.s3tc.ctex"]
 
 [params]
 

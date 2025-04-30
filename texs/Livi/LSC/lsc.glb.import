@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bvunk64ddvryi"
-path="res://.godot/imported/bus.gltf-7af171254b9ae99306b7b9484e161685.scn"
+uid="uid://beitt3gmvkx43"
+path="res://.godot/imported/lsc.glb-9252f8bd75830023747d1fc7ab12212a.scn"
 
 [deps]
 
-source_file="res://texs/bus.gltf"
-dest_files=["res://.godot/imported/bus.gltf-7af171254b9ae99306b7b9484e161685.scn"]
+source_file="res://texs/Livi/LSC/lsc.glb"
+dest_files=["res://.godot/imported/lsc.glb-9252f8bd75830023747d1fc7ab12212a.scn"]
 
 [params]
 
