@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0qjxjl27xuoa"]
+
+[ext_resource type="PackedScene" uid="uid://c8wuq0bm2ljec" path="res://Panels/SinglePanel.tscn" id="1_pxr8d"]
+
+[node name="DoublePanel" type="Node3D"]
+
+[node name="PanelSingle" parent="." instance=ExtResource("1_pxr8d")]
+
+[node name="PanelSingle2" parent="." instance=ExtResource("1_pxr8d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8.88357)

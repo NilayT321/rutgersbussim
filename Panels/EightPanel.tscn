@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2hfm11fi10gf"]
+
+[ext_resource type="PackedScene" uid="uid://doaelqg3rw1ia" path="res://Panels/FourPanel.tscn" id="1_wh3c3"]
+
+[node name="EightPanel" type="Node3D"]
+
+[node name="FourPanel" parent="." instance=ExtResource("1_wh3c3")]
+
+[node name="FourPanel2" parent="." instance=ExtResource("1_wh3c3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -34.8902)
