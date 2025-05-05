@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2ic7rgpryqic"]
+
+[ext_resource type="PackedScene" uid="uid://djt0b8hsiccxt" path="res://texs/Bus/bus.glb" id="1_xlfce"]
+[ext_resource type="Script" uid="uid://tsc4qm7o3n6c" path="res://texs/Bus/bus.gd" id="2_n5sl8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xlfce"]
+size = Vector3(6.26744, 2.02161, 1.6859)
+
+[node name="Bus" type="Node3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="bus" parent="." instance=ExtResource("1_xlfce")]
+script = ExtResource("2_n5sl8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="bus"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.151527, 0.0897827, -0.00342256)
+shape = SubResource("BoxShape3D_xlfce")
+
+[node name="BackRight" type="VehicleWheel3D" parent="bus"]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -2.08594, -0.689777, 0.866167)
+use_as_traction = true
+
+[node name="FrontRight" type="VehicleWheel3D" parent="bus"]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 1.97481, -0.689777, 0.866167)
+use_as_steering = true
+
+[node name="FrontLeft" type="VehicleWheel3D" parent="bus"]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 1.95667, -0.689777, -0.871357)
+use_as_steering = true
+
+[node name="BackLeft" type="VehicleWheel3D" parent="bus"]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -2.05561, -0.689777, -0.871356)
+use_as_traction = true
+suspension_travel = 0.4
+suspension_stiffness = 15.0

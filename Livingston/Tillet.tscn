@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://wsupqkwnousg"]
+
+[ext_resource type="PackedScene" uid="uid://54qen0p3w3k4" path="res://texs/Livi/Tillet/Tillet.glb" id="1_1m0d6"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_1epcd"]
+points = PackedVector3Array(1, 1, 1, 1, 1, -1, -1, 1, 1, 1, -1, 1, 1, -1, -1, -1, 1, -1, -1, -1, 1, -1, -1, -1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_eny85"]
+points = PackedVector3Array(1, 1, 1, 1, 1, -1, -1, 1, 1, 1, -1, 1, 1, -1, -1, -1, 1, -1, -1, -1, 1, -1, -1, -1)
+
+[node name="Tillet" instance=ExtResource("1_1m0d6")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_1epcd")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube_001" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube_001/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_eny85")

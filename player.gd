@@ -43,7 +43,7 @@ func move_player():
 		velocity.x = move_toward(velocity.x, 0, speed)
 		velocity.z = move_toward(velocity.z, 0, speed)
 	
-	move_and_slide()
+	#move_and_slide()
 
 func _unhandled_input(event: InputEvent) -> void:
 	# First person camera logic 

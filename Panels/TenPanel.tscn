@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cv4xj3m81jl5e"]
+
+[ext_resource type="PackedScene" uid="uid://c2hfm11fi10gf" path="res://Panels/EightPanel.tscn" id="1_l5raq"]
+[ext_resource type="PackedScene" uid="uid://b0qjxjl27xuoa" path="res://Panels/DoublePanel.tscn" id="2_ocnpk"]
+
+[node name="TenPanel" type="Node3D"]
+
+[node name="EightPanel" parent="." instance=ExtResource("1_l5raq")]
+
+[node name="DoublePanel" parent="." instance=ExtResource("2_ocnpk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 26.4354)
