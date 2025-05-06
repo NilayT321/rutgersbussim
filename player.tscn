@@ -16,14 +16,3 @@ shape = SubResource("CapsuleShape3D_sh265")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("CapsuleMesh_4flbx")
-
-[node name="FPCamera" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.587628, 0)
-
-[node name="TPCameraPivot" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 4)
-
-[node name="SpringArm3D" type="SpringArm3D" parent="TPCameraPivot"]
-spring_length = 5.0
-
-[node name="TPCamera" type="Camera3D" parent="TPCameraPivot/SpringArm3D"]

@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=3 uid="uid://cagm2quxmuh7f"]
+
+[ext_resource type="PackedScene" uid="uid://djt0b8hsiccxt" path="res://texs/Bus/bus.glb" id="1_4pr30"]
+[ext_resource type="Script" uid="uid://ck67fybibk1qo" path="res://bus.gd" id="2_2pxms"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_w1g15"]
+size = Vector3(6.25098, 1.86617, 1.70306)
+
+[node name="Bus" instance=ExtResource("1_4pr30")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+mass = 500.0
+script = ExtResource("2_2pxms")
+max_engine_force = 500
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." index="15"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.206787, 0.129856, -0.00244212)
+shape = SubResource("BoxShape3D_w1g15")
+
+[node name="FrontCamera" type="Camera3D" parent="." index="16"]
+transform = Transform3D(-4.37114e-08, -0.116671, -0.993171, 0, 0.993171, -0.116671, 1, -5.09984e-09, -4.34129e-08, 2.82343, 0.189634, -0.275901)
+
+[node name="RightFront" type="VehicleWheel3D" parent="." index="17"]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 1.96845, -0.685813, 0.868028)
+use_as_steering = true
+suspension_travel = 0.4
+suspension_stiffness = 15.0
+
+[node name="RightBack" type="VehicleWheel3D" parent="." index="18"]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -2.09658, -0.685813, 0.868028)
+use_as_traction = true
+suspension_travel = 0.4
+suspension_stiffness = 15.0
+
+[node name="LeftBack" type="VehicleWheel3D" parent="." index="19"]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -2.09658, -0.685813, -0.855035)
+use_as_traction = true
+suspension_travel = 0.4
+suspension_stiffness = 15.0
+
+[node name="LeftFront" type="VehicleWheel3D" parent="." index="20"]
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, 1.92972, -0.685813, -0.855035)
+use_as_steering = true
+suspension_travel = 0.4
+suspension_stiffness = 15.0
+
+[node name="BackCamPivot" type="Node3D" parent="." index="21"]
+transform = Transform3D(0.875355, 0.483481, 5.44841e-09, -0.483481, 0.875355, 2.11336e-08, 5.44841e-09, -2.11336e-08, 1, -7.5842, 2.05949, 3.31516e-07)
+
+[node name="SpringArm3D" type="SpringArm3D" parent="BackCamPivot" index="0"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+spring_length = 5.0
+
+[node name="BackCamera" type="Camera3D" parent="BackCamPivot/SpringArm3D" index="0"]

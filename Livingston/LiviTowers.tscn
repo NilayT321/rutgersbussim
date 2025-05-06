@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtiv2iksov8jo"]
+
+[ext_resource type="PackedScene" uid="uid://bfwh68de6yh6m" path="res://texs/Livi/Towers/livi_tower.glb" id="1_aojq1"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_5fgmc"]
+points = PackedVector3Array(1, 1, 1, 1, 1, -1, -1, 1, 1, 1, -1, 1, 1, -1, -1, -1, 1, -1, -1, -1, 1, -1, -1, -1)
+
+[node name="LiviTower" instance=ExtResource("1_aojq1")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_5fgmc")

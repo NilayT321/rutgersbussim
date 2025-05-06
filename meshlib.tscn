@@ -49,7 +49,6 @@ points = PackedVector3Array(-1.5, 0, -1.5, -1.5, 0, 1.5, 1.5, 0, -1.5, 1.5, 0, 1
 [node name="Node3D" type="Node3D"]
 
 [node name="Road" type="MeshInstance3D" parent="."]
-visible = false
 mesh = SubResource("PlaneMesh_4d8gt")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Road"]
@@ -59,7 +58,6 @@ shape = SubResource("ConcavePolygonShape3D_tx18f")
 
 [node name="Sidewalk" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00423741, 0.42486, 0.00231481)
-visible = false
 mesh = SubResource("PlaneMesh_kt64y")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Sidewalk"]
@@ -69,7 +67,6 @@ shape = SubResource("ConcavePolygonShape3D_y0eie")
 
 [node name="Grass" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86031, 0)
-visible = false
 mesh = SubResource("PlaneMesh_y0eie")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Grass"]

@@ -8,15 +8,21 @@ extends CharacterBody3D
 var camera_mode = 0
 
 # First person camera
-@onready var camera = $FPCamera
-
-# Third person camera
-@onready var tp_camera_pivot = $TPCameraPivot
-@onready var tp_camera = $TPCameraPivot/SpringArm3D/TPCamera
+#@onready var camera = $FPCamera
+#
+## Third person camera
+#@onready var tp_camera_pivot = $TPCameraPivot
+#@onready var tp_camera = $TPCameraPivot/SpringArm3D/TPCamera
 
 # Camera speed and velocity
 @export var camera_sensitivty = 0.001
 
+func _onready():
+	# Turn player cameras off 
+	#camera.current = false
+	#tp_camera.current = false
+	pass
+	
 # Quit game on hitting escape 
 func _input(event):
 	if event.is_action_pressed("ui_cancel"):
@@ -49,7 +55,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	# First person camera logic 
 	if camera_mode == 0:
 		# Set the camera to current. This automatically deselects the other camera
-		camera.current = true
+		#camera.current = true
 		
 		# Start capturing the mouse 
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -60,10 +66,10 @@ func _unhandled_input(event: InputEvent) -> void:
 				rotate_y(-event.relative.x * camera_sensitivty)
 				
 				# The camera should rotate about the x-axis
-				camera.rotate_x(-event.relative.y * camera_sensitivty)
-				
-				# Clamp the camera's rotation. We don't want the neck to rotate too much
-				camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-30), deg_to_rad(60))
+				#camera.rotate_x(-event.relative.y * camera_sensitivty)
+				#
+				## Clamp the camera's rotation. We don't want the neck to rotate too much
+				#camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-30), deg_to_rad(60))
 				
 	# Third person camera logic 
 	if camera_mode == 1:
@@ -72,6 +78,6 @@ func _unhandled_input(event: InputEvent) -> void:
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		
 		# Set the tp_camera to true. This automatically disables the other camera.
-		tp_camera.current = true
+		#tp_camera.current = true
 		
 		

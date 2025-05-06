@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bksrj1ravehej"]
+
+[ext_resource type="PackedScene" uid="uid://cxjtvsbp2ccxp" path="res://texs/Livi/RWJGarage/RWJGarage.glb" id="1_lkxi6"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_pyegf"]
+points = PackedVector3Array(1, 1, 1, 1, 1, -1, -1, 1, 1, 1, -1, 1, 1, -1, -1, -1, 1, -1, -1, -1, 1, -1, -1, -1)
+
+[node name="RWJGarage" instance=ExtResource("1_lkxi6")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cube" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cube/StaticBody3D" index="0"]
+shape = SubResource("ConvexPolygonShape3D_pyegf")
